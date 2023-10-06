@@ -6,9 +6,12 @@
       name="viewport"
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
-    <meta name="description" content="Portofolio, Merch, Treasure Merch" />
-    <meta name="author" content="Treasure Merch" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
     <title>Treasure Merch Official</title>
+    <!-- AoS Animated -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <!-- Disqus -->
     <script
       id="dsq-count-scr"
       src="//zidanherlangga.disqus.com/count.js"
@@ -42,7 +45,7 @@
       <div class="container">
         <a class="navbar-brand" href="#page-top">Treasure Merch</a>
         <button
-          class="navbar-toggler text-white border-0"
+          class="navbar-toggler text-white border-0 fs-6"
           type="button"
           data-bs-toggle="collapse"
           data-bs-target="#navbarResponsive"
@@ -72,6 +75,7 @@
         </div>
       </div>
     </nav>
+    <!-- Header -->
     <header class="masthead">
       <div class="container">
         <div class="masthead-subheading">Welcome to Treasure Merch</div>
@@ -83,7 +87,7 @@
     </header>
     <!-- Services-->
     <section class="page-section" id="services">
-      <div class="container">
+      <div class="container" data-aos="zoom-in">
         <div class="text-center">
           <h2 class="section-heading text-uppercase">Services</h2>
           <h3 class="section-subheading text-muted">
@@ -128,7 +132,7 @@
     </section>
     <!-- Gallery Grid-->
     <section class="page-section bg-light" id="gallery">
-      <div class="container">
+      <div class="container" data-aos="zoom-in">
         <div class="text-center">
           <h2 class="section-heading text-uppercase">Gallery</h2>
           <!-- <h3 class="section-subheading text-muted">
@@ -302,7 +306,7 @@
     </section>
     <!-- About-->
     <section class="page-section" id="about">
-      <div class="container">
+      <div class="container" data-aos="zoom-in">
         <div class="text-center">
           <h2 class="section-heading text-uppercase">About</h2>
           <h3 class="section-subheading text-muted">
@@ -400,8 +404,8 @@
       </div>
     </section>
     <!-- Team-->
-    <section class="page-section bg-light" id="team">
-      <div class="container">
+    <section class="page-section bg-light" id="team" data-aos="zoom-in">
+      <div class="container" data-aos="zoom-in">
         <div class="text-center">
           <h2 class="section-heading text-uppercase">Our Amazing Team</h2>
           <h3 class="section-subheading text-muted">
@@ -438,7 +442,7 @@
             <div class="team-member">
               <img
                 class="mx-auto rounded-circle"
-                src="assets/img/team/zidan-bgBlue.jpg"
+                src="assets/img/team/zidan.jpg"
                 alt="..."
               />
               <h4>Zidan Herlangga</h4>
@@ -610,7 +614,7 @@
     </div> -->
     <!-- Contact-->
     <section class="page-section" id="contact">
-      <div class="container">
+      <div class="container" data-aos="zoom-in">
         <div class="text-center">
           <h2 class="section-heading text-uppercase">Disqus</h2>
         </div>
@@ -652,28 +656,32 @@
           <div class="col-lg-4 my-3 my-lg-0">
             <a
               class="btn btn-dark btn-social mx-2"
-              href="#!"
+              href="404/"
               aria-label="Twitter"
               ><i class="fab fa-twitter"></i
             ></a>
             <a
               class="btn btn-dark btn-social mx-2"
-              href="#!"
+              href="404/"
               aria-label="Facebook"
               ><i class="fab fa-facebook-f"></i
             ></a>
             <a
               class="btn btn-dark btn-social mx-2"
-              href="#!"
+              href="404/"
               aria-label="LinkedIn"
               ><i class="fab fa-linkedin-in"></i
             ></a>
           </div>
           <div class="col-lg-4 text-lg-end">
-            <a class="link-dark text-decoration-none me-3" href="#!"
+            <a
+              class="link-dark text-decoration-none me-3"
+              href="privacy_policy/"
               >Privacy Policy</a
             >
-            <a class="link-dark text-decoration-none" href="#!">Terms of Use</a>
+            <a class="link-dark text-decoration-none" href="term_of_use/"
+              >Terms of Use</a
+            >
           </div>
         </div>
       </div>
@@ -1060,6 +1068,11 @@
         .move(3)
         .type(" you.")
         .go();
+    </script>
+    <!-- AoS JS -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
     </script>
   </body>
 </html>
