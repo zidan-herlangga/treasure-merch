@@ -1,0 +1,10 @@
+:root {
+  --main-color: #ff8080;
+  --second-color: #176B87;
+}
+
+.navbar {
+  /* background-color: var(--second-color) !important; */
+}
+
+
