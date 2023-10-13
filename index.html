@@ -6,17 +6,10 @@
       name="viewport"
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
-    <meta name="description" content="" />
-    <meta name="author" content="" />
+    <meta name="keyword" content="tm-official" />
+    <meta name="description" content="Merchandise, Lifestyle, Portfolio" />
+    <meta name="author" content="Zidan Herlangga" />
     <title>Treasure Merch</title>
-    <!-- AoS Animated -->
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-    <!-- Disqus -->
-    <script
-      id="dsq-count-scr"
-      src="https://zidanherlangga.disqus.com/count.js"
-      async
-    ></script>
     <!-- Favicon-->
     <link rel="icon" type="image/x-icon" href="assets/logo.png" />
     <!-- Font Awesome icons (free version)-->
@@ -41,7 +34,11 @@
   </head>
   <body id="page-top">
     <!-- Navigation-->
-    <nav class="navbar navbar-expand-lg fixed-top" id="mainNav">
+    <nav
+      class="navbar navbar-expand-lg fixed-top"
+      style="background-color: transparent"
+      id="mainNav"
+    >
       <div class="container">
         <a class="navbar-brand" href="#">
           <!-- <img
@@ -66,7 +63,7 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
-            <li class="nav-item">
+            <li class="nav-item w-25">
               <a
                 class="nav-link navLinkBahasa"
                 data-bahasa-en="Services"
@@ -75,7 +72,7 @@
                 >Services</a
               >
             </li>
-            <li class="nav-item">
+            <li class="nav-item w-25">
               <a
                 class="nav-link navLinkBahasa"
                 data-bahasa-en="Gallery"
@@ -84,7 +81,7 @@
                 >Gallery</a
               >
             </li>
-            <li class="nav-item">
+            <li class="nav-item w-25">
               <a
                 class="nav-link navLinkBahasa"
                 data-bahasa-en="About"
@@ -93,7 +90,7 @@
                 >About</a
               >
             </li>
-            <li class="nav-item">
+            <li class="nav-item w-25">
               <a
                 class="nav-link navLinkBahasa"
                 data-bahasa-en="Team"
@@ -102,7 +99,7 @@
                 >Team</a
               >
             </li>
-            <li class="nav-item">
+            <li class="nav-item w-25">
               <a
                 class="nav-link navLinkBahasa"
                 data-bahasa-en="Disqus"
@@ -111,7 +108,7 @@
                 >Disqus</a
               >
             </li>
-            <li class="list-inline-item justify-content-start d-flex">
+            <li class="list-inline-item w-50 justify-content-start d-flex">
               <div class="btn-group">
                 <button
                   class="btn btn-warning btn-sm fw-bold pBahasa tombolBahasa"
@@ -136,33 +133,20 @@
       </video>
 
       <div class="content">
-        <h1
-          class="judulBahasa"
-          data-bahasa-en="Welcome to Treasure Merch"
-          data-bahasa-id="Selamat Datang di Treasure Merch"
-          style="color: #ffc800"
-          id="simpleUsage"
-        >
-          Welcome to Treasure Merch
-        </h1>
-        <p
-          class="pBahasa"
-          data-bahasa-en="Create Memories: Discover Exclusive Merch That Will Keep You Captive."
-          data-bahasa-id="Ciptakan Kenangan: Temukan Merchandise Eksklusif yang Akan Membegitu Anda."
-        >
-          Ciptakan Kenangan: Temukan Merchandise Eksklusif yang Akan Membegitu
-          Anda.
+        <h1 style="color: #ffc800" id="simpleUsage"></h1>
+        <p>
+          <em
+            class="pBahasa"
+            data-bahasa-en="Create Memories: Discover Exclusive Merch That Will Keep You Captive."
+            data-bahasa-id="Ciptakan Kenangan: Temukan Merchandise Eksklusif yang Akan Membegitu Anda."
+          >
+            Create Memories: Discover Exclusive Merch That Will Keep You
+            Captive.</em
+          >
         </p>
         <!-- Use a button to pause/play the video with JavaScript -->
-        <a href="homepage/">
-          <button
-            id="animasiBtn"
-            class="judulBahasa"
-            data-bahasa-en="Next"
-            data-bahasa-id="Lanjut"
-          >
-            Next
-          </button>
+        <a href="#!">
+          <button id="animasiBtn">Pause</button>
         </a>
       </div>
     </header>
@@ -172,9 +156,34 @@
     <script src="https://unpkg.com/typeit@8.7.1/dist/index.umd.js"></script>
     <script>
       new TypeIt("#simpleUsage", {
-        speed: 500,
+        startDelay: 1000,
+        strings: "Welcome to Treasure Merch",
+        speed: 100,
         waitUntilVisible: true,
-      }).go();
+        loop: true,
+      })
+        .pause(1500)
+        .delete(25, { delay: 1000 })
+        .type("Selamat Datang di Treasure Merch")
+        .pause(1500)
+        .go();
+    </script>
+    <!-- Script untuk tombol pause/play video -->
+    <script>
+      var video = document.getElementById("animasi"); // Ambil elemen video
+      var button = document.getElementById("animasiBtn"); // Ambil elemen tombol
+
+      button.addEventListener("click", function () {
+        if (video.paused) {
+          // Jika video sedang dijeda, putar video
+          video.play();
+          button.textContent = "Pause";
+        } else {
+          // Jika video sedang diputar, jeda video
+          video.pause();
+          button.textContent = "Play";
+        }
+      });
     </script>
   </body>
 </html>
