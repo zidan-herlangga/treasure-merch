@@ -5,7 +5,7 @@
   bottom: 0;
   min-width: 100%;
   min-height: 100%;
-  opacity: 1.5;
+  /* opacity: 1.5; */
 }
 body {
   font-family: Arial, Helvetica, sans-serif;
@@ -34,4 +34,12 @@ body {
 #animasiBtn:hover {
   background: #ddd;
   color: #ffc800;
+}
+
+@media screen and (max-width: 600px) {
+  .animasi {
+    position: absolute;
+    left: -100%;
+    /* right: 50%; */
+  }
 }

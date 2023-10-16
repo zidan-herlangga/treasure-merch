@@ -12,11 +12,13 @@
     <title>Treasure Merch</title>
     <!-- Favicon-->
     <link rel="icon" type="image/x-icon" href="assets/logo.png" />
+
     <!-- Font Awesome icons (free version)-->
     <script
       src="https://use.fontawesome.com/releases/v6.3.0/js/all.js"
       crossorigin="anonymous"
     ></script>
+
     <!-- Google fonts-->
     <link
       href="https://fonts.googleapis.com/css?family=Montserrat:400,700"
@@ -28,9 +30,11 @@
       rel="stylesheet"
       type="text/css"
     />
+
     <!-- Core theme CSS (includes Bootstrap)-->
     <link href="css/styles.css" rel="stylesheet" />
     <link rel="stylesheet" href="css/edit.css" />
+    <!-- <link rel="stylesheet" href="css/music.css" /> -->
   </head>
   <body id="page-top">
     <!-- Navigation-->
@@ -125,13 +129,14 @@
     </nav>
     <!-- Header -->
     <header>
-      <video autoplay muted loop id="animasi">
+      <video autoplay muted loop id="animasi" class="animasi">
         <source
-          src="https://hidden0026.netlify.app/background.mp4"
+          src="assets/img/mixkit-way-between-black-cubes-into-a-3d-light-27179-medium.mp4"
           type="video/mp4"
         />
       </video>
 
+      <!-- Content -->
       <div class="content">
         <h1 style="color: #ffc800" id="simpleUsage"></h1>
         <p>
@@ -150,8 +155,26 @@
         </a>
       </div>
     </header>
+
+    <!-- Backsound -->
+    <div>
+      <audio id="track" autoplay>
+        <source src="/music/Monday-Bounce.mp3" type="audio/mpeg" />
+      </audio>
+
+      <div id="player-container">
+        <div id="play-pause" class="play">Play</div>
+      </div>
+    </div>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Language JS -->
     <script src="lang/language.js"></script>
+
+    <!-- Music JS -->
+    <script src="js/music.js"></script>
+
     <!-- TypeIt -->
     <script src="https://unpkg.com/typeit@8.7.1/dist/index.umd.js"></script>
     <script>
@@ -168,6 +191,7 @@
         .pause(1500)
         .go();
     </script>
+
     <!-- Script untuk tombol pause/play video -->
     <script>
       var video = document.getElementById("animasi"); // Ambil elemen video
@@ -177,10 +201,12 @@
         if (video.paused) {
           // Jika video sedang dijeda, putar video
           video.play();
+          track.play();
           button.textContent = "Pause";
         } else {
           // Jika video sedang diputar, jeda video
           video.pause();
+          track.pause();
           button.textContent = "Play";
         }
       });
